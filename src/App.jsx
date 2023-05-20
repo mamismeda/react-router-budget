@@ -6,6 +6,11 @@ import Main,{mainLoader} from "./layouts/Main";
 
 import Error from "./pages/Error";
 
+
+//actions
+import {logoutAction} from './actions/logout'
+
+
 // Routes
 const router = createBrowserRouter([
   {
@@ -22,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "logout",
-        element: <p>Logged Out!</p>
+        action: logoutAction
       }
     ],
   },

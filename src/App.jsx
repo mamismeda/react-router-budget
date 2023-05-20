@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard, { dashboardLoader } from "./pages/Dashboard";
+import Dashboard, { dashboardAction, dashboardLoader } from "./pages/Dashboard";
 
 //library
 import { ToastContainer, toast } from 'react-toastify';
@@ -28,6 +28,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Dashboard />,
         loader: dashboardLoader,
+        action:dashboardAction,
         errorElement: <Error />,
       },
       {
